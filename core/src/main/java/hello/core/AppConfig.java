@@ -14,6 +14,9 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class AppConfig {
+    //@Bean memberService -> new MemoryMemeberRepository()
+    //@Bean orderService -> new MemoryMemeberRepository()  싱글톤이 깨지는 것...?
+
    @Bean    //spring container에 등록
    public MemberService memberService(){                    //MemberService 역할
        return new MemberServiceImpl(memberRepository());    //구현 클래스
